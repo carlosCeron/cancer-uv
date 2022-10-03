@@ -1,0 +1,28 @@
+.main-content{
+    width: 85%;
+    height: 100vh;
+    background-color: #eaeaea;
+}
+
+.main{
+    padding: 15px;
+    color: black;
+    width: 100%;
+    overflow: hidden;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-card-title{
+    color: #F6FBF4;
+}

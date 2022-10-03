@@ -1,0 +1,14 @@
+/* .header-container{
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    position: fixed;
+} */
+
+.search-option{
+    justify-content: right;
+}
+
+.separator-uv{
+    width: 500px !important;
+}
