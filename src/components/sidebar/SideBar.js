@@ -1,67 +1,45 @@
 import React from 'react';
 import './SideBar.css';
-import { 
-  FiHome,
-  FiEdit,
-  FiPhoneIncoming,
-  FiPieChart,
-  FiSettings
-} from "react-icons/fi";
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { PanelMenu } from 'primereact/panelmenu';
 
-
-
-const items = [
-  {
-    label: "Home",
-    icon: "pi pi-fw pi-home",
-    items:[]
-  },
-  {
-    label: "Historia clinica",
-    icon: "pi pi-fw pi-chart-bar",
-    items: [
-    ],
-  },
-  {
-    label: "Pacientes",
-    icon: "pi pi-fw pi-user",
-    items: [
-    ],
-  },
-  {
-    label: "Reportes",
-    icon: "pi pi-fw pi-chart-pie",
-    items: [
-    ],
-  },
-  {
-    label: "Carga de datos",
-    icon: "pi pi-fw pi-database",
-    items: [],
-  },
-  {
-    label: "Configuraciones",
-    icon: "pi pi-fw pi-cog",
-    items: [
-      {
-        label: "Crear Usuario",
-        icon: "pi pi-fw pi-circle-fill",
-      },
-    ],
-  },
-];
 
 
 
 export const SideBar = () => {
 
+  let navigate = useNavigate();
 
-  const menuOptions = [
-    {title: 'Home', icon: <FiHome />, url: 'home'},
-    {title: 'About', icon: <FiEdit />, url: 'about'}
+  const items = [
+    {
+      label: "Home",
+      icon: "pi pi-fw pi-home",
+      command: () => navigate("/"),
+    },
+    {
+      label: "Historia clinica",
+      icon: "pi pi-fw pi-chart-bar",
+    },
+    {
+      label: "Pacientes",
+      icon: "pi pi-fw pi-user",
+      command: () => navigate("pacientes"),
+    },
+    {
+      label: "Reportes",
+      icon: "pi pi-fw pi-chart-pie",
+    },
+    {
+      label: "Mapa Diagnosticos",
+      icon: "pi pi-fw pi-map-marker",
+      command: () => navigate("mapa"),
+    },
+    {
+      label: "Configuraciones",
+      icon: "pi pi-fw pi-cog",
+    },
   ];
+
 
   return (
     <div className='side-bar'>

@@ -6,9 +6,17 @@
 } */
 
 .search-option{
-    justify-content: right;
+    /* justify-content: right; */
 }
 
 .separator-uv{
     width: 500px !important;
+}
+
+.header-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: red;
 }

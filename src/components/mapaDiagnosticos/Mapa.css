@@ -1,0 +1,21 @@
+.mapa-footer{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mapa-footer-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-footer-item p{
+    font-size: 14px;
+    color: #001d3d;
+    font-weight: bold;
+    margin-left: 10px;
+}

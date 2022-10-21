@@ -4,32 +4,20 @@ import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
 
 
+
 export const Header = () => {
 
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState('');
+
+  const startLogo = <h2 className='header-brand'>HCUV</h2>
+  const end = <InputText placeholder="Search" type="text" />;
 
   const items = [
-    {
-      label: 'Search',
-      template: () => {
-
-        return (
-
-          <span className='p-input-icon-left'>
-            <i className='pi pi-search' />
-            <InputText
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)} />
-          </span>
-
-        )
-      }
-    }
   ];
 
   return (
-    <div className='header-container'>
-      <Menubar model={items} className='search-option'/>
+    <div className="header-container">
+      <Menubar model={items} start={startLogo} end={end} />
     </div>
-  )
+  );
 }
